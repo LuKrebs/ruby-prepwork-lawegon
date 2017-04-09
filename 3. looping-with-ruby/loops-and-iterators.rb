@@ -112,7 +112,7 @@ puts ""
 puts "----------------------"
 puts ""
 
-5.times {print "I'm almost a full stack web developer"}
+5.times {print "I'm almost a full stack web developer :)"}
 puts ""
 puts "----------------------"
 puts ""

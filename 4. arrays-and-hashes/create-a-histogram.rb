@@ -1,66 +1,9 @@
-# Creating arrays
-my_array = ["Luciano", 1, 6, "apple"]
+puts "Text please: " #greet the user and ask a text
+text = gets.chomp #store the text in a variable called "text"
 
-# Access by Index
-print my_array[3] # ~> "apple"
-
-# Arrays of arrays
-multi_d_array = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
-
-multi_d_array.each { |x| puts "#{x}\n" }
-
-puts "----------------------"
-puts ""
-
-my_2d_array = [[1, 2, 3, 4], [5, 6, 7, 8]]
-
-my_2d_array.each {|x| puts "#{x}\n"}
-
-puts "----------------------"
-puts ""
-
-# Introduction to Hashes
-my_hash = { "name" => "Eric",
-  "age" => 26,
-  "hungry?" => true
-}
-
-puts my_hash["name"]
-puts my_hash["age"]
-puts my_hash["hungry?"]
-
-puts "----------------------"
-puts ""
-
-# Using Hash.new
-# p.s: the word "Hash" must be capitalized
-pets = Hash.new
-
-pets["Grachinski's"] = "nalinha"
-puts pets["Grachinski's"]
-
-puts "----------------------"
-puts ""
-
-# Iterating with .each over an Hash
-
-family = { "Homer" => "dad",
-  "Marge" => "mom",
-  "Lisa" => "sister",
-  "Maggie" => "sister",
-  "Abe" => "grandpa",
-  "Santa's Little Helper" => "dog"
-}
-puts "Family hash"
-family.each {|x, y| puts "#{x}: #{y}"}
-
-puts ""
-puts "Friends array"
-friends = ["Milhouse", "Ralph", "Nelson", "Otto"]
-friends.each {|x| puts "#{x}"}
-
-# Iterating Over Arrays
-languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"]
-
-languages.each {|x| puts x}
-puts ""
+words = text.split(" ") # making the user's text into an array split by space (" ")
+frequencies = Hash.new(0) # creating a new empty hash, with a default value of 0
+words.each {|word| frequencies[word] += 1} # each time a word repeat in the text, the value pair in the hash increase 1
+frequencies = frequencies.sort_by {|a, b| b } # sorting by the value pair in the ascending order
+frequencies.reverse! # resorting by the descending order
+frequencies.each {|word, frequency| puts word + " " + frequency.to_s } #put out the key/value pair separeted by a space
