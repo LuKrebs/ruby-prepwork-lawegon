@@ -94,3 +94,62 @@ cars = {
 puts cars
 puts ""
 puts movies
+
+
+puts ""
+puts ""
+# Filtering hashes using .select
+grades = { alice: 100,
+  bob: 92,
+  chris: 95,
+  dave: 97
+}
+
+x = grades.select {|x, y| y > 97}
+y = grades.select {|x, y| x == :alice}
+
+puts x
+puts y
+
+puts ""
+puts ""
+
+movie_ratings = {
+  memento: 3,
+  primer: 3.5,
+  the_matrix: 5,
+  truman_show: 4,
+  red_dawn: 1.5,
+  skyfall: 4,
+  alex_cross: 2,
+  uhf: 1,
+  lion_king: 3.5
+}
+
+good_movies = movie_ratings.select {|a, b| b > 3}
+
+# Working with .each_key and .each_value
+my_hash = { one: 1, two: 2, three: 3 }
+
+my_hash.each_key { |k| print k, " " }
+# ==> one two three
+
+my_hash.each_value { |v| print v, " " }
+# ==> 1 2 3
+puts ""
+puts ""
+
+movie_ratings = {
+  memento: 3,
+  primer: 3.5,
+  the_matrix: 3,
+  truman_show: 4,
+  red_dawn: 1.5,
+  skyfall: 4,
+  alex_cross: 2,
+  uhf: 1,
+  lion_king: 3.5
+}
+# Add your code below!
+
+movie_ratings.each_key {|a| puts a}
