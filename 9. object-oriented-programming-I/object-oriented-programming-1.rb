@@ -153,7 +153,6 @@ class MyApp < Application
 end
 
 # Override methods within classes
-
 class Creature
   def initialize(name)
     @name = name
@@ -167,5 +166,24 @@ end
 class Dragon < Creature
   def fight
     return "Breathes fires!!"
+  end
+end
+
+# Time to practice
+class Message
+  @@message_sent = 0
+
+  def initialize(from, to)
+    @from = from
+    @to = to
+    @@message_sent += 1
+  end
+end
+
+my_message = Message.new("Lu", "Ma")
+
+class Email < Message
+  def initialize(from, to)
+    super
   end
 end
