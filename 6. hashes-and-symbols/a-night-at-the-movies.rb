@@ -1,4 +1,4 @@
-#This is a very simple ruby program building with the purpose to worki with the core concecpts of the ruby syntax
+#This is a very simple ruby program building with the purpose to working with the core concecpts of the ruby syntax
 
 movies = {
   Memento: 3,

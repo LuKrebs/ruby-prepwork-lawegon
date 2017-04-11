@@ -135,7 +135,7 @@ book_1 = "A Wrinkle in Time"
 
 book_2 = "A Brief History of Time"
 
-puts book_1 <=> book_2
+puts book_1 <=> book_2 # ~> 1, 0 -1
 
 
 #Sorting both ascending order and descending order
