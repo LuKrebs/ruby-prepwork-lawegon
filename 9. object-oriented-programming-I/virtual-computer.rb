@@ -50,4 +50,8 @@ class Computer
   end
 end
 
+puts ""
 my_computer = Computer.new("Lu", 123456)
+my_computer.create("README.md")
+puts ""
+puts Computer.get_users
