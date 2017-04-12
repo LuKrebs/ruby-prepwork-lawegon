@@ -16,6 +16,8 @@ am_i_hungry = false
 puts "I don't want to eat" unless am_i_hungry
 
 puts ""
+
+
 # Working with Ternary
 pizza = true
 

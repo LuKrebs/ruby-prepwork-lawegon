@@ -92,7 +92,7 @@ puts ""
 numbers_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 string_array = numbers_array.collect(&:to_s)
 
-# p.s: the method map also work in the same way
+# p.s: the method .map also work in the same way
 string_array_two = numbers_array.map(&:to_s)
 
 print string_array
@@ -127,7 +127,7 @@ def batman_ironman_proc
   victor.call
   "Ironman will win!"
 end
-# ~> Proc return return the immediately withou return to the method
+# ~> Proc's return will return the immediately without return to the method
 puts batman_ironman_proc
 
 def batman_ironman_lambda
